@@ -7,6 +7,11 @@
 
 import SDL
 
+struct Scene {
+    let update: (_ dt: Double) -> Void
+    let draw: (Display.Context) -> Void
+}
+
 class App {
     let display: Display
 
@@ -14,11 +19,13 @@ class App {
         self.display = display
     }
 
-    func run() {
+    func run(scene: Scene) {
         var quit = false
         var event = SDL_Event()
 
         while !quit {
+            scene.update(0.1)
+
             while SDL_PollEvent(&event) > 0 {
                 Log.info("event", event.type)
                 if event.type == SDL_QUIT.rawValue {
@@ -27,11 +34,7 @@ class App {
             }
 
             display.draw { context in
-                context.setClearColor(red: 1, green: 1, blue: 1, alpha: 1)
-                context.clear()
-
-                context.setDrawColor(red: 0, green: 0, blue: 0, alpha: 1)
-                context.fill(rect: Rect(x: 20, y: 20, w: 20, h: 20))
+                scene.draw(context)
             }
 
             SDL_Delay(100)
