@@ -7,7 +7,15 @@
 
 import SDL
 
-let display = Display(title: "Recty's Adventure", height: 600, width: 800)
+let screenWidth: Double = 800
+let screenHeight: Double = 600
+
+let floorHeight: Double = 100
+let display = Display(
+    title: "Recty's Adventure",
+    height: Int(screenHeight),
+    width: Int(screenWidth)
+)
 
 let app = App(display: display)
 
@@ -24,6 +32,9 @@ app.run(
 
             context.setDrawColor(red: 0, green: 0, blue: 0, alpha: 1)
             context.fill(rect: Rect(x: x, y: x, w: 20, h: 20))
+
+            context.setDrawColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
+            context.fill(rect: Rect(x: 0, y: screenHeight - floorHeight, w: screenWidth, h: floorHeight))
         }
     )
 )
