@@ -24,10 +24,10 @@ class App {
         var event = SDL_Event()
 
         while !quit {
-            scene.update(0.1)
+            scene.update(0.05)
 
             while SDL_PollEvent(&event) > 0 {
-                Log.info("event", event.type)
+                Log.info("event", event.type, event.key.keysym.sym)
                 if event.type == SDL_QUIT.rawValue {
                     quit = true
                 }
@@ -37,7 +37,7 @@ class App {
                 scene.draw(context)
             }
 
-            SDL_Delay(100)
+            SDL_Delay(50)
         }
 
         SDL_Quit()
