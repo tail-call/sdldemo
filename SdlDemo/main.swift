@@ -5,25 +5,38 @@
 //  Created by Maria Zaitseva on 21.12.2023.
 //
 
-import Foundation
+import SDL2
 
 let screenWidth: Double = 800
 let screenHeight: Double = 600
-
 let floorHeight: Double = 100
-let display = Display(
+
+guard SDL_Init(SDL_INIT_VIDEO) == 0 else {
+    fatalError("SDL could not initialize! SDL_Error: \(String(cString: SDL_GetError()))")
+}
+
+let window = Window(
     title: "Great fall of Recty",
     height: Int(screenHeight),
     width: Int(screenWidth)
 )
 
-let app = App(display: display)
+let renderer = Renderer(window: window)
+let app = App(renderer: renderer)
 
 var y: Double = 0
 
-let surface = Surface(width: 64, height: 64)
-let pixels = surface.sdlSurface.pointee.pixels?.load(as: Int64.self)
-print("👾 \(pixels)") // Pixels are filled with zeroes
+let width = 64
+let height = 64
+let surface = Surface(width: width, height: height)
+let pixels = surface.sdlSurface.pointee.pixels!
+for x in 0 ..< width {
+    let byte: UInt8 = 128
+    pixels.storeBytes(of: byte, toByteOffset: 4 * x, as: UInt8.self)
+    pixels.storeBytes(of: byte, toByteOffset: 4 * x + 1, as: UInt8.self)
+    pixels.storeBytes(of: byte, toByteOffset: 4 * x + 2, as: UInt8.self)
+    pixels.storeBytes(of: byte, toByteOffset: 4 * x + 3, as: UInt8.self)
+}
 
 app.run(
     scene: Scene(

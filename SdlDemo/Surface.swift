@@ -25,4 +25,8 @@ class Surface {
             SDL_PIXELFORMAT_RGBA8888.rawValue
         )!
     }()
+
+    deinit {
+        SDL_FreeSurface(sdlSurface)
+    }
 }

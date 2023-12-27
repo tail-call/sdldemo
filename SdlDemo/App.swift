@@ -9,14 +9,14 @@ import SDL
 
 struct Scene {
     let update: (_ dt: Double) -> Void
-    let draw: (Display.Context) -> Void
+    let draw: (Renderer) -> Void
 }
 
 class App {
-    let display: Display
+    let renderer: Renderer
 
-    init(display: Display) {
-        self.display = display
+    init(renderer: Renderer) {
+        self.renderer = renderer
     }
 
     func run(scene: Scene) {
@@ -33,9 +33,8 @@ class App {
                 }
             }
 
-            display.draw { context in
-                scene.draw(context)
-            }
+            scene.draw(renderer)
+            renderer.present()
 
             SDL_Delay(50)
         }
