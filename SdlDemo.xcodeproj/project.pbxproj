@@ -12,6 +12,7 @@
 		B38F3CF32B347D3B00117D7A /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F3CF22B347D3B00117D7A /* Display.swift */; };
 		B38F3CF52B3497A400117D7A /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F3CF42B3497A400117D7A /* App.swift */; };
 		B38F3CF72B34987B00117D7A /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38F3CF62B34987B00117D7A /* Log.swift */; };
+		B3CA52B12B3C77F6000FC305 /* Surface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CA52B02B3C77F6000FC305 /* Surface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,8 @@
 		B38F3CF22B347D3B00117D7A /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
 		B38F3CF42B3497A400117D7A /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		B38F3CF62B34987B00117D7A /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		B3CA52AF2B3C5DB7000FC305 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Headers; path = "../../../Library/Developer/Xcode/DerivedData/SdlDemo-agdsmsvwxkpflwfxbqhittonamno/SourcePackages/checkouts/SwiftSDL2/SDL2.xcframework/macos-arm64_x86_64/Headers"; sourceTree = "<group>"; };
+		B3CA52B02B3C77F6000FC305 /* Surface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +52,7 @@
 		B38F3CDC2B3478FC00117D7A = {
 			isa = PBXGroup;
 			children = (
+				B3CA52AF2B3C5DB7000FC305 /* Headers */,
 				B38F3CE72B3478FC00117D7A /* SdlDemo */,
 				B38F3CE62B3478FC00117D7A /* Products */,
 			);
@@ -66,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				B38F3CE82B3478FC00117D7A /* main.swift */,
+				B3CA52B02B3C77F6000FC305 /* Surface.swift */,
 				B38F3CF22B347D3B00117D7A /* Display.swift */,
 				B38F3CF42B3497A400117D7A /* App.swift */,
 				B38F3CF62B34987B00117D7A /* Log.swift */,
@@ -141,6 +146,7 @@
 				B38F3CF32B347D3B00117D7A /* Display.swift in Sources */,
 				B38F3CF72B34987B00117D7A /* Log.swift in Sources */,
 				B38F3CE92B3478FC00117D7A /* main.swift in Sources */,
+				B3CA52B12B3C77F6000FC305 /* Surface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

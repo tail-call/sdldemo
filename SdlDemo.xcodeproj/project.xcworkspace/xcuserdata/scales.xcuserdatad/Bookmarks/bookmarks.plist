@@ -3,6 +3,45 @@
 <plist version="1.0">
 <dict>
 	<key>top-level-items</key>
-	<array/>
+	<array>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>home-directory</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>Library/Developer/Xcode/DerivedData/SdlDemo-agdsmsvwxkpflwfxbqhittonamno/SourcePackages/checkouts/SwiftSDL2/SDL2.xcframework/macos-arm64_x86_64/Headers/SDL.h</string>
+					</dict>
+				</dict>
+				<key>type</key>
+				<string>DVTDocumentLocation</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>home-directory</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>Library/Developer/Xcode/DerivedData/SdlDemo-agdsmsvwxkpflwfxbqhittonamno/Index.noindex/Build/Products/Debug/include/SDL_render.h</string>
+					</dict>
+				</dict>
+				<key>type</key>
+				<string>DVTDocumentLocation</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+	</array>
 </dict>
 </plist>

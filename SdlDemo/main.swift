@@ -21,6 +21,10 @@ let app = App(display: display)
 
 var y: Double = 0
 
+let surface = Surface(width: 64, height: 64)
+let pixels = surface.sdlSurface.pointee.pixels?.load(as: Int64.self)
+print("👾 \(pixels)") // Pixels are filled with zeroes
+
 app.run(
     scene: Scene(
         update: { dt in
