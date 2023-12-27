@@ -12,6 +12,10 @@ struct Rect {
     let y: Double
     let w: Double
     let h: Double
+
+    func offsetBy(dx: Double, dy: Double) -> Rect {
+        Rect(x: x + dx, y: y + dy, w: w, h: h)
+    }
 }
 
 func sdlRectFrom(rect: Rect) -> SDL_Rect {
