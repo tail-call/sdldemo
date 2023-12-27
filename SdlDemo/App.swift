@@ -7,11 +7,6 @@
 
 import SDL
 
-struct Scene {
-    let update: (_ dt: Double) -> Void
-    let draw: (Renderer) -> Void
-}
-
 class App {
     let renderer: Renderer
 
@@ -33,7 +28,7 @@ class App {
                 }
             }
 
-            scene.draw(renderer)
+            scene.draw()
             renderer.present()
 
             SDL_Delay(50)

@@ -46,7 +46,7 @@ app.run(
                 y += 100 * dt
             }
         },
-        draw: { renderer in
+        draw: {
             renderer.setClearColor(red: 1, green: 1, blue: 1, alpha: 1)
             renderer.clear()
 
